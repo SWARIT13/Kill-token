@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "kill_token",
+	"version": "${version}",
+	"name": "Kill_Token",
+	"description": "This mod adds kill token!~ by Swaritz? which are dropped when players are killed and are valuable for buying items on server",
+	"authors": [
+		"Swaritz? "
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT ",
+	"icon": "assets/kill_token/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.swaritz.kill_token.Kill_Token"
+		],
+		"client": [
+			"net.swaritz.kill_token.Kill_TokenClient"
+		],
+		"fabric-datagen": [
+			"net.swaritz.kill_token.Kill_TokenDataGenerator"
+		]
+	},
+	"mixins": [
+		"kill_token.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.2",
+		"minecraft": "~1.20",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
